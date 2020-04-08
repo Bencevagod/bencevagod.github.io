@@ -1,0 +1,15 @@
+p {
+    width: 250px;
+    border: solid black 3px;
+    border-top: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#last p {
+    border-bottom: none;
+}
+
+p:hover {
+    background-color: palevioletred;
+}
