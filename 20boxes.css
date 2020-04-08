@@ -1,0 +1,30 @@
+body {
+    width: 1000px;
+}
+
+.blue_container{
+    border: solid 3px blue;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.purple_container{
+    border: solid 3px purple;
+    background-color: tomato;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blue {
+    width: 80px;
+    height: 80px;
+    background-color: dodgerblue;
+}
+
+.purple {
+    width: 80px;
+    height: 80px;
+    background-color: indigo;
+}
