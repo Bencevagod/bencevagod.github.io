@@ -1,0 +1,28 @@
+div {
+    border: solid thin black;
+    background-color: whitesmoke;
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 0.3em;
+    padding: 50px;
+}
+
+input {
+    height: 30px;
+    width: 70%;
+    margin: 0;
+    border-radius: 0.5em;
+    border: solid 2px lightgray;
+    box-sizing: border-box;
+}
+
+button {
+    height: 30px;
+    margin: 0;
+    border-radius: 0.5em;
+    background-color: mediumorchid;
+    color: white;
+}
