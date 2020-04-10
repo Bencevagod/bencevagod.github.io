@@ -6,5 +6,5 @@ $('button').click (() => {
 })
 
 $('li').click (() => {
-    $('li').css('text-decoration', 'line-through')
+    $('li').css('color', 'lightgrey')
 })

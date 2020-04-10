@@ -1,5 +1,9 @@
+body {
+    background-color: rgba(179, 164, 36, 0.705);
+}
+
 div {
-    border: solid thin black;
+    border: solid thin lightgray;
     background-color: whitesmoke;
     width: 30%;
     height: auto;
@@ -7,22 +11,53 @@ div {
     margin-top: 10%;
     text-align: center;
     border-radius: 0.3em;
-    padding: 50px;
+    padding: 30px;
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    border: solid thin grey;
+    padding: 0px;
+    border-radius: 5px;
+    width: 80%;
+    overflow: hidden;
+    text-align: center;
 }
 
 input {
-    height: 30px;
-    width: 70%;
-    margin: 0;
-    border-radius: 0.5em;
-    border: solid 2px lightgray;
-    box-sizing: border-box;
+    flex-grow: 20;
+    border: none;
+    border-radius: 3px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    font-size: 17px;
+}
+
+input:focus {
+    outline: none;
 }
 
 button {
-    height: 30px;
-    margin: 0;
-    border-radius: 0.5em;
+    height: 35px;
     background-color: mediumorchid;
     color: white;
+    flex-grow: 0.3;
+    margin: 0rem;
+    font-size: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+li {
+    font-size: 20px;
+    list-style-type: none;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 70px;
 }
