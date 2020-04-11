@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="./todo.css">
+	<style>
+		.container { padding:0px; margin:0px; width:100%; border:0px; }
+		.todo { padding:4px; margin:4px; width:100%; border:1px solid; background:#f0f0f0; border-radius:4px; }		
+		.todocap { display:inline-block; width:80%; text-align:left; text-decoration:inherit;  }
+		.todocheck { width:auto; }
+		.todobutton { width:auto;  }
+	</style>
+</head>
+<body>
+    <div id="bode">
+        <h1>Todos</h1>
+        <div id="form">
+            <input type="text" id="input">
+            <button id="add" id="add">Add</button>
+        </div>
+        <i class="far fa-check-circle"></i>
+        <div id="container" class="container"></div>
+    </div>
+    <script>
+	var inpText=document.getElementById("input");
+	var btnAdd=document.getElementById("add");
+	var container=document.getElementById("container");
+	
+	btnAdd.onclick=function() {
+		let todo = document.getElementById("input").value;
+		const check = document.createElement("input");
+		check.className="todocheck";
+		check.type = "checkbox";
+
+		const button = document.createElement("button");
+		button.className="todobutton";
+		button.innerHTML="x";
+		
+		let span=document.createElement("span");
+		span.className="todocap";
+		span.innerHTML=todo;
+		
+		let div=document.createElement("div");
+		div.className="todo";
+		div.appendChild(span);
+		div.appendChild(check);
+		div.appendChild(button);
+		
+		check.onclick=function() {
+			this.parentNode.style=this.checked?'color:#c0c0c0; text-decoration: line-through;':'color:black';
+		};		
+		button.onclick=function() {
+			this.parentNode.parentNode.removeChild(this.parentNode);
+		};		
+		
+		container.appendChild(div);
+		inpText.value="";
+		inpText.focus();
+	}
+	
+	</script>
+</body>
+</html>
