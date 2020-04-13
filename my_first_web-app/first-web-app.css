@@ -1,0 +1,61 @@
+body {
+    background-color: lightgrey;
+}
+
+#viewer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    box-shadow: grey 0px 3px 5px 3px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#back-arrow {
+    background-image: url("http://stayathome-syllabus.greenfox.academy/week03/assets/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    border: thin solid;
+    background-color: ivory;
+    
+}
+
+#forward-arrow {
+    background-image: url("http://stayathome-syllabus.greenfox.academy/week03/assets/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(0.5turn);
+    border: solid thin;
+    width: 50px;
+    background-color: ivory;
+}
+
+#img-container {
+    border: thin solid;
+    width: 900px;
+    background-size: 900px 500px;
+    background-repeat: no-repeat;
+}
+
+#image_info {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 900px;
+    height: 150px;
+    position: absolute;
+    bottom: 149px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#image_title {
+    color: white;
+}
+
+#image_description {
+    color: white;
+}
