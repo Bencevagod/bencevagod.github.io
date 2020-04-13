@@ -14,37 +14,33 @@ let img = document.getElementById('img-container');
 let title = document.getElementById('image_title');
 let description = document.getElementById('image_description');
 let currentPhoto = 0;
-img.style.backgroundImage = 'url('+data.photo[currentPhoto]+')';
-title.textContent = data.title[currentPhoto];
-description.textContent = data.description[currentPhoto];
-
 let up = document.getElementById('forward-arrow');
 let down = document.getElementById('back-arrow');
+
+function printImage(){
+    img.style.backgroundImage = 'url('+data.photo[currentPhoto]+')';
+    title.textContent = data.title[currentPhoto];
+    description.textContent = data.description[currentPhoto];
+}
+
+printImage();
 
 up.onclick = function() {
     if (currentPhoto === 6) {
         currentPhoto = 0;
-        img.style.backgroundImage = 'url('+data.photo[currentPhoto]+')';
-        title.textContent = data.title[currentPhoto];
-        description.textContent = data.description[currentPhoto];
+        printImage();
     } else {
         currentPhoto++;
-        img.style.backgroundImage = 'url('+data.photo[currentPhoto]+')';
-        title.textContent = data.title[currentPhoto];
-        description.textContent = data.description[currentPhoto];
+        printImage();
     }
 }
 
 down.onclick = function() {
     if (currentPhoto === 0) {
         currentPhoto = 6;
-        img.style.backgroundImage = 'url('+data.photo[currentPhoto]+')';
-        title.textContent = data.title[currentPhoto];
-        description.textContent = data.description[currentPhoto];
+        printImage();
     } else {
         currentPhoto--;
-        img.style.backgroundImage = 'url('+data.photo[currentPhoto]+')';
-        title.textContent = data.title[currentPhoto];
-        description.textContent = data.description[currentPhoto];
+        printImage();
     }
 }
