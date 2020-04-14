@@ -1,17 +1,18 @@
 body {
-    background-color: lightgrey;
+    background-color: rgb(243, 223, 197);
 }
 
 #viewer {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 70px;
     display: flex;
     width: 1000px;
     height: 500px;
     box-shadow: grey 0px 3px 5px 3px;
     border-radius: 5px;
     overflow: hidden;
+    user-select: none;
 }
 
 #back-arrow {
@@ -19,9 +20,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
-    border: thin solid;
     background-color: ivory;
-    
+    cursor: pointer;
+    transition: background-color .2s ease-out;
+}
+
+#back-arrow:hover, #forward-arrow:hover {
+    background-color: wheat;
 }
 
 #forward-arrow {
@@ -29,17 +34,21 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(0.5turn);
-    border: solid thin;
     width: 50px;
     background-color: ivory;
+    cursor: pointer;
+    transition: background-color .5s ease-out;
 }
 
 #img-container {
-    border: thin solid;
     width: 900px;
     background-size: 900px 500px;
     background-repeat: no-repeat;
     position: relative;
+    -webkit-transition: background-image .3s ease-in-out;
+    -moz-transition: background-image .3s ease-in-out;
+    -o-transition: background-image .3s ease-in-out;
+    transition: background-image .3s ease-in-out;
 }
 
 #image_info {
@@ -60,3 +69,14 @@ body {
 #image_description {
     color: white;
 }
+
+#thumbnails {
+    width: 700px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
