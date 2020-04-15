@@ -20,13 +20,22 @@ let thumbnail_container = document.getElementById('thumbnails');
 let counter = 0;
 
 data.photo.forEach((i) => {
+    let newdiv = document.createElement('div');
+    newdiv.setAttribute('class', 'div'+counter+'');
+    newdiv.style.cssText = ('position: relative; text align: center; width: 80px; height: 80px, display: inline-block');
     let thumbnail = new Image;
-    thumbnail.src = i;
-    thumbnail.style.cssText = 'object-fit: cover; width: 70px; height: 70px; box-shadow: grey 0px 0px 3px 2px; padding: 3px; border-radius: 1px';
+    thumbnail.style.cssText = 'object-fit: cover; width: 70px; height: 70px; box-shadow: grey 0px 0px 3px 2px; padding: 3px; border-radius: 1px; position: relative';
     thumbnail.setAttribute('id', counter);
-    thumbnail.setAttribute('title', data.title[counter]);
+    //thumbnail.setAttribute('title', data.title[counter]);
+    let thumb_title = document.createElement('span');
+    thumb_title.setAttribute('id', 'thumb-title'+counter+'');
+    //thumb_title.style.cssText = 'position: relative; top: 0px; width: auto; text-align: center; background: black; padding: 10px, margin-bottom: 10px; color: white; visibility: hidden';
+    thumb_title.innerText = data.title[counter];
+    thumbnail.src = i;
     counter++;
-    thumbnail_container.append(thumbnail);
+    newdiv.appendChild(thumbnail);
+    newdiv.appendChild(thumb_title);
+    thumbnail_container.appendChild(newdiv);
 })
 
 let thumb0 = document.getElementById('0');
@@ -130,6 +139,9 @@ thumb6.onclick = function() {
     printImage();
 }
 /*
+Failed attempts at syncing thumbnail and the image at the viewer area, making the viewer show the image clicked at the thumbnail section
+Also highlight the thumbnail of the image being showed at the viewer area
+
 let arr = [thumb0, thumb1, thumb2, thumb3, thumb4, thumb5, thumb6]
 arr.onclick = function() {
     
@@ -144,8 +156,8 @@ thumbnail_container.onclick = function() {
     let ncounter = 0;
     for (let n of arr) {
         n.addEventListener('click', function() {
-            //currentPhoto = ncounter;
-            //printImage();
+            currentPhoto = ncounter;
+            printImage();
             console.log(ncounter);
         });
         ncounter++;

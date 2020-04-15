@@ -22,7 +22,10 @@ body {
     width: 50px;
     background-color: ivory;
     cursor: pointer;
-    transition: background-color .2s ease-out;
+    -webkit-transition: background-color .3s ease-out;
+    -moz-transition: background-color .3s ease-out;
+    -o-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
 }
 
 #back-arrow:hover, #forward-arrow:hover {
@@ -37,7 +40,10 @@ body {
     width: 50px;
     background-color: ivory;
     cursor: pointer;
-    transition: background-color .5s ease-out;
+    -webkit-transition: background-color .3s ease-out;
+    -moz-transition: background-color .3s ease-out;
+    -o-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
 }
 
 #img-container {
@@ -78,5 +84,229 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
+.div0 #thumb-title0 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    border: thin solid wheat;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.div0 #thumb-title0::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.div0:hover #thumb-title0 {
+    visibility: visible;
+}
+
+.div1 #thumb-title1 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    border: thin solid wheat;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.div1 #thumb-title1::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.div1:hover #thumb-title1 {
+    visibility: visible;
+}
+
+.div2 #thumb-title2 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    border: thin solid wheat;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.div2 #thumb-title2::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.div2:hover #thumb-title2 {
+    visibility: visible;
+}
+
+.div3 #thumb-title3 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    border: thin solid wheat;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.div3 #thumb-title3::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.div3:hover #thumb-title3 {
+    visibility: visible;
+}
+
+.div4 #thumb-title4 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    border: thin solid wheat;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.div4 #thumb-title4::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.div4:hover #thumb-title4 {
+    visibility: visible;
+}
+
+.div5 #thumb-title5 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    border: thin solid wheat;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.div5 #thumb-title5::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.div5:hover #thumb-title5 {
+    visibility: visible;
+}
+
+.div6 #thumb-title6 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    border: thin solid wheat;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+}
+
+.div6 #thumb-title6::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.div6:hover #thumb-title6 {
+    visibility: visible;
+}
