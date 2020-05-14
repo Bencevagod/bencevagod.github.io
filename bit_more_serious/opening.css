@@ -1,0 +1,54 @@
+#welcome {
+    position: relative;
+    top: 150px;
+    width: 500px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    border: thin solid;
+    text-align: center;
+    padding: 20px;
+    border-radius: 3px;
+    transition: background-color 1s ease-out;
+}
+
+input {
+    display: block;
+    width: 60%;
+    height: 10%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    border: solid thin gray;
+    border-radius: 3px;
+}
+
+#username {
+    border-bottom: none;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+#button {
+    background-color: rgb(65 179 247);
+    border-radius: 10em;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 20px 2px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+#button:hover {
+    background-color: rgb(3, 113, 204);
+}
+
+#welcome:hover {
+    background-color: powderblue;
+}
