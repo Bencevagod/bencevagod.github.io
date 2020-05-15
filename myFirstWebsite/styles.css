@@ -26,6 +26,11 @@ body {
     align-items: center;
 }
 
+img:hover {
+    cursor: pointer;
+}
+
+
 a {
     color: hotpink;
     
