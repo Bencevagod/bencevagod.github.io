@@ -63,7 +63,7 @@ public class Game {
   public void setUserInp() {
     Scanner scanner = new Scanner(System.in);
     System.out.print("> ");
-    this.userInp = scanner.next();
+    this.userInp = scanner.next().toUpperCase();
   }
 
   public void checkGuess() {
