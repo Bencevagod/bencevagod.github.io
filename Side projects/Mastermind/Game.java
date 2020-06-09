@@ -22,7 +22,7 @@ public class Game {
     System.out.println("Good luck!");
     this.generateColorSequence();
     System.out.println(this.getColors());
-    while(this.getGuessCount()<10 || !this.getIsWinner()){
+    while(this.getGuessCount()<10 && !this.getIsWinner()){
       this.setUserInp();
       System.out.println();
       this.checkGuess();
@@ -88,9 +88,8 @@ public class Game {
     int correctOnes = 0;
     for (int i = 0; i < colors.length; i++) {
       if (userinp[i] == colors[i]) {
-        break;
+        correctOnes++;
       }
-      correctOnes++;
     }
     return correctOnes;
   }
