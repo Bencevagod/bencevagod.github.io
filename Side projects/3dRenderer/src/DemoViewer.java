@@ -44,9 +44,19 @@ public class DemoViewer {
                         new Vertex(-100, -100, 100),
                         Color.BLUE));
 
+                double heading = Math.toRadians(headingSlider.getValue());
+                Matrix3 transform = new Matrix3(new double[] {
+                        Math.cos(heading), 0, -Math.sin(heading),
+                        0,1,0,
+                        Math.sin(heading), 0, Math.cos(heading)
+                });
+
                 g2.translate(getWidth()/2, getHeight()/2);
                 g2.setColor(Color.WHITE);
                 for (Triangle t : tris) {
+                    Vertex v1 = transform.transform(t.v1);
+                    Vertex v2 = transform.transform(t.v2);
+                    Vertex v3 = transform.transform(t.v3);
                     Path2D path = new Path2D.Double();
                     path.moveTo(t.v1.x, t.v1.y);
                     path.lineTo(t.v2.x, t.v2.y);
@@ -58,6 +68,9 @@ public class DemoViewer {
         };
 
         pane.add(renderPanel, BorderLayout.CENTER);
+
+        headingSlider.addChangeListener(e -> renderPanel.repaint());
+        pitchSlider.addChangeListener(e -> renderPanel.repaint());
 
         frame.setSize(400, 400);
         frame.setVisible(true);
@@ -86,6 +99,37 @@ public class DemoViewer {
             this.v2 = v2;
             this.v3 = v3;
             this.color = color;
+        }
+    }
+
+    static class Matrix3 {
+        double[] values;
+
+        Matrix3(double[] values) {
+            this.values = values;
+        }
+
+        Matrix3 multiply(Matrix3 other) {
+            double[] result = new double[9];
+            for (int row = 0; row < 3; row++) {
+                for (int col = 0; col < 3; col++) {
+                    for (int i = 0; i < 3; i++) {
+                        result[row * 3 + col] += this.values[row * 3 + col] * other.values[i * 3 + col];
+                    }
+                }
+            }
+            return new Matrix3(result);
+        }
+
+        DemoViewer demoViewer = new DemoViewer();
+//        double pitch = Math.toRadians(demoViewer.);
+
+        Vertex transform(Vertex in) {
+            return new Vertex(
+                    in.x * values[0] + in.y * values[3] + in.z * values[6],
+                    in.x * values[1] + in.y * values[4] + in.z * values[7],
+                    in.x * values[2] + in.y * values[5] + in.z * values[8]
+            );
         }
     }
 }
