@@ -9,7 +9,7 @@ public class Chips implements Food {
 //        if (extras != null) {
 //            return client.getHappiness() * 0.05;
 //        }
-        return client.getHappiness() * 1.05;
+        return client.getHappiness() * 0.05;
     }
 
 

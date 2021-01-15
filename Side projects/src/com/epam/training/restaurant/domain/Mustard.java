@@ -8,6 +8,6 @@ public class Mustard extends FoodExtraDecorator {
 
     @Override
     public double calculateHappiness(Client client) {
-        return client.getHappiness() + 1;
+        return 1;
     }
 }

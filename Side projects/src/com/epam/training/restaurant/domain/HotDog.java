@@ -9,6 +9,6 @@ public class HotDog implements Food {
 //        if (extras != null) {
 //            return 2;
 //        }
-        return client.getHappiness() + 2;
+        return 2;
     }
 }
